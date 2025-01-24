@@ -954,56 +954,138 @@ h2 {
   margin-right: 30px;
 }
 
-#closea:hover {
-  transform: rotate(-90deg);
+
+
+.game {
+  position: relative;
+  border: 2px solid transparent; /* Start with no border */
+  border-radius: 15px; /* Smooth and modern rounded corners */
+  background: rgba(255, 255, 255, 0.1); /* Subtle frosted-glass base */
+  backdrop-filter: blur(12px) saturate(150%); /* Stronger glass effect */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), inset 0 0 15px rgba(255, 255, 255, 0.1); /* Depth and glow */
+  transition: 
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), /* Smoother animations */
+    background 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
-.announce h2 {
-  font-size: 18px;
-  text-align: left;
-  padding-left: 30px;
-  margin-block: 0;
-}
-
-.announce a {
-  color: white;
+.game:hover {
+  background: rgba(255, 255, 255, 0.2); /* Slightly brighter glass effect */
+  transform: scale(1.15) rotate(1deg); /* Dynamic hover scaling and subtle rotation */
+  border-color: lightblue; /* Bold light blue border */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.2); /* More intense shadows */
 }
 
 .game::before {
   content: attr(name);
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 90px;
-  height: 80%;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 120px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.7); /* Sophisticated dark glass overlay */
+  backdrop-filter: blur(6px); /* Subtle glass blur */
+  padding: 10px;
   opacity: 0;
-  background-color: var(--bg-color);
-  opacity: 0;
-  padding-inline: 10px;
-  padding-block: 12px;
-  transition: 0.3s;
-  display: flex;
   color: white;
-  justify-content: center;
-  align-items: end;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
   text-align: center;
-  transition: opacity 0.3s ease;
-}
-
-.info-popup {
-  position: absolute;
-  z-index: 100000;
+  line-height: 1.2;
+  border-radius: 10px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Clean glow around text */
+  transition: 
+    opacity 0.4s ease,
+    transform 0.4s ease;
 }
 
 .game:hover::before {
-  opacity: 0.6;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-50%) scale(1.1); /* Slight pop-out effect on hover */
 }
 
-.game:hover {
-  background-size: 115%;
-  transform: scale(1.1);
+.game:active {
+  transform: scale(1.05); /* Subtle press effect */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.2); /* Softer active shadow */
 }
+
+/* Ensure the preloader and particles are behind the game elements */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999; /* Keep it on top during loading */
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Keep it behind everything else */
+  pointer-events: none; /* Prevent particles from blocking clicks or hover */
+}
+
+/* Game container style */
+.games-container {
+  position: relative; /* Ensure the games container is positioned above other layers */
+  z-index: 2; /* Keep it above the particle background */
+}
+
+.game {
+  position: relative; /* Ensure proper layering for each game element */
+  z-index: 10; /* Keep it above any other non-interactive layers */
+  pointer-events: all; /* Ensure the game elements are clickable and hoverable */
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInScale 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect for games */
+.game:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.15) rotate(1deg);
+}
+
+.game::before {
+  content: attr(name);
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 120px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  padding: 10px;
+  opacity: 0;
+  color: var(--light-blue); /* Light blue text */
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+  border-radius: 10px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.game:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-50%) scale(1.1);
+}
+
 
 h2 {
   color: var(--text-color);
@@ -1021,225 +1103,530 @@ hr {
   background-color: rgb(255, 255, 255);
 }
 
-.special-st {
-  width: 150px;
-  height: 150px;
-  border: 5px solid rgb(225, 139, 9);
-  box-sizing: content-box;
-  box-shadow: 0px 0px 8px rgb(225, 139, 9);
-  transition: box-shadow 0.2s linear;
-  transition: border-color 0.2s;
-  border-radius: 20px;
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-.special-st::before {
-  display: none;
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.special-st:hover {
-  box-shadow: 0px 0px 20px rgb(255, 132, 0);
-  border-color: rgb(255, 132, 0);
+/* Apply these animations to the games */
+
+
+/* Add a cascading delay for dynamic loading */
+.game:nth-child(1) {
+  animation-delay: 0.2s;
 }
 
-.thumbnail {
-  width: 100%;
-  border-radius: 20px;
+.game:nth-child(2) {
+  animation-delay: 0.4s;
 }
 
-.light {
-  background-color: rgb(235, 235, 235) !important;
-  color: rgb(40, 40, 40) !important;
-  fill: rgb(40, 40, 40) !important;
+.game:nth-child(3) {
+  animation-delay: 0.6s;
 }
 
-.link-l {
-  border-bottom: 2px solid rgb(235, 235, 235) !important;
-}
-
-.link-l::after {
-  background-color: rgb(255, 183, 0) !important;
-}
-.shadow {
-  box-shadow: 0px 0px 5px rgb(84, 84, 84) !important;
-}
-
-.overflowm {
-  display: none;
-  width: 40px;
-  padding: 10px;
-  height: 40px;
-  border-radius: 10px;
-  margin-inline: 25px;
-  cursor: pointer;
+/* Preloader */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #2b2b44);
+  display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  visibility: visible;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.preloader-content {
+  position: relative;
+  z-index: 2;
   text-align: center;
-  background-color: black;
-  transition: background-color 0.2s ease !important;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
-.overflowm:hover {
-  background-color: rgb(30, 30, 30);
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid lightblue;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
 }
 
-.overflow-menu {
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --light-blue: #00bcd4;
+  --font-gaming: "Orbitron", sans-serif; /* Main gaming font */
+  --font-secondary: "Russo One", sans-serif; /* Bold secondary font */
+  --font-retro: "Press Start 2P", monospace; /* Retro gaming font */
+}
+
+body {
+  font-family: var(--font-gaming);
+  color: var(--light-blue); /* Light blue for text */
+  background-color: #121212; /* Dark background for contrast */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-gaming);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--light-blue);
+  letter-spacing: 2px;
+}
+
+.preloader-content h1 {
+  font-family: var(--font-retro); /* Retro pixel-style for preloader */
+  color: var(--light-blue);
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 4px 10px rgba(0, 188, 212, 0.7);
+}
+
+.game::before {
+  font-family: var(--font-secondary); /* Bold font for game names */
+  font-size: 16px;
+  color: var(--light-blue);
+  text-transform: uppercase;
+}
+
+.game:hover::before {
+  text-shadow: 0 2px 8px rgba(0, 188, 212, 0.9); /* Glowing hover effect */
+}
+
+.a {
+  font-family: var(--font-retro);
+}
+.games-container {
+  padding: 1000;
+}
+/* Main layout */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr; /* Left, center (games), right */
+  grid-template-rows: auto; /* Single row layout */
+  height: 100vh; /* Full viewport height */
+  background-color: #121212;
+  color: var(--light-blue);
+}
+
+/* Sidebar styles */
+.sidebar {
+  background: rgba(255, 255, 255, 0.05); /* Slightly visible glass effect */
+  backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
-  transform: translateX(-50vw);
-  width: 50vw;
-  position: fixed;
-  padding-block: 20px;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  z-index: 10000;
-  background-color: rgb(30, 30, 30);
-  transition: transform 0.3s ease !important;
-}
-
-.menu-slide {
-  transform: translateX(0px);
-  box-shadow: 0px 0px 10px rgb(30, 30, 30);
-}
-
-.secondselect {
-  display: none;
-}
-
-@media (width < 1050px) {
-  .nav-link {
-    display: none;
-  }
-  .secondselect {
-    display: flex;
-  }
-}
-
-@media (width < 850px) {
-  label:hover {
-    padding-left: 30px;
-  }
-  label {
-    font-size: 18px;
-  }
-}
-
-@media (width < 700px) {
-  .functions {
-    width: 70%;
-    margin-inline: 15%;
-  }
-  #cloaker,
-  #clform,
-  #cloaker2 {
-    width: 90%;
-    margin-inline: 5%;
-  }
-  .clbtn {
-    padding-inline: 0;
-  }
-}
-
-@media (width < 500px) {
-  .nav-link,
-  .select {
-    display: none;
-  }
-  .logo2 {
-    padding-block: 8px;
-    box-sizing: content-box;
-    margin: 0;
-  }
-  .overflowm {
-    display: flex;
-  }
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-  background-color: var(--bg-color);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--text-color);
-  border: 3px solid var(--bg-color);
-  border-radius: 10px;
-}
-
-.modal-background {
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 99999;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
   justify-content: center;
-}
-
-.modal {
-  background-color: rgb(15, 15, 15);
-  width: 400px;
+  align-items: center;
+  padding: 20px;
+  color: var(--light-blue);
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  padding-inline: 30px;
-  box-shadow: 0px 0px 50px rgb(40, 40, 40);
-  position: relative;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-.modal-title {
-  font-size: 30px;
-  margin-block: 30px;
+/* Left sidebar */
+.left-sidebar {
+  grid-column: 1 / 2; /* First column */
 }
 
-.modal-des {
-  color: rgb(180, 180, 180);
-  line-height: 30px;
-  font-size: 18px;
-  margin-bottom: 30px;
+/* Right sidebar */
+.right-sidebar {
+  grid-column: 3 / 4; /* Last column */
 }
 
-.modal-link {
-  background-color: var(--link);
-  color: white;
-  text-decoration: none;
-  width: 40%;
-  margin-inline: 30%;
-  display: block;
+/* Main content area */
+.main-content {
+  grid-column: 2 / 3; /* Center column */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.games-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 800px;
+}
+
+/* Sidebar info blocks */
+.info {
+  margin: 10px 0;
   text-align: center;
-  padding-block: 10px;
-  font-size: 18px;
-  border-radius: 5px;
+}
+
+.info span {
   font-weight: bold;
-  margin-top: 30px;
-  box-shadow: 0px 0px 10px var(--link);
-  transition: box-shadow 0.3s ease;
+  color: var(--light-blue);
 }
 
-.modal-link:hover {
-  box-shadow: 0px 0px 20px var(--link);
+/* Example content for right sidebar */
+.extra-content {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* Main layout */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr; /* Left sidebar, games, right sidebar */
+  grid-template-rows: auto;
+  height: 100vh; /* Full viewport height */
+  background-color: #121212;
+  color: var(--light-blue);
+  gap: 20px;
 }
 
-.modal-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 16px;
-  height: 16px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  background-color: transparent;
+/* Sidebar styles */
+.sidebar {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: var(--light-blue);
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Left sidebar */
+.left-sidebar {
+  grid-column: 1 / 2;
+}
+
+/* Right sidebar */
+.right-sidebar {
+  grid-column: 3 / 4;
+}
+
+/* Main content area */
+.main-content {
+  grid-column: 2 / 3; /* Center column */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center games vertically */
+  align-items: center; /* Center games horizontally */
+  padding: 20px;
+}
+
+.games-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center games in the container */
+  max-width: 800px;
+}
+/* General styles for hidden elements */
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(50px); /* Start below the viewport */
+  transition: all 0.6s ease-out; /* Smooth transition */
+}
+
+/* When element is visible */
+.scroll-visible {
+  opacity: 1;
+  transform: translateY(0); /* Reset to its original position */
+}
+/* Entire scrollbar track */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the vertical scrollbar */
+  height: 12px; /* Height of the horizontal scrollbar */
+}
+
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05); /* Slightly transparent track */
+  border-radius: 10px;
+  backdrop-filter: blur(5px); /* Glass effect */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); /* Inner shadow */
+}
+
+/* Scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #00aaff, #0055ff); /* Dynamic gradient */
+  border-radius: 10px; /* Smooth corners */
+  border: 2px solid rgba(0, 0, 0, 0.5); /* Add a border for a 3D effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Hover effect on the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #0055ff, #00ffff); /* Change gradient on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Enhance shadow on hover */
+}
+
+/* Horizontal scrollbar for cross-browser consistency */
+::-webkit-scrollbar-thumb:horizontal {
+  background: linear-gradient(45deg, #ff007a, #ff5500);
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: #00aaff rgba(255, 255, 255, 0.05); /* Thumb color and track color */
+}
+/* Scroll progress bar styles */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%; /* Starts at 0% */
+  height: 5px; /* Height of the progress bar */
+  background: linear-gradient(90deg, #fff200, #ff7300, #ff0000); /* Dynamic gradient */
+  z-index: 9999; /* Make sure it stays on top */
+  transition: width 0.1s ease-out; /* Smooth update */
+}
+
+/* Page content */
+.content {
+  height: 200vh; /* Add enough height to make scrolling possible */
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
   color: white;
+  background-color: #121212;
+}
+.game:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 8px 15px rgba(0, 170, 255, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating {
+  position: absolute;
+  animation: float 5s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* General Forum Page Styles */
+.forum-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Orbitron", sans-serif;
+  color: #ffffff;
+  background: #121212;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Forum Header */
+.forum-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.forum-header h1 {
+  font-size: 2.5rem;
+  color: #00aaff;
+  text-shadow: 0 0 10px #00aaff, 0 0 20px #0055ff;
+}
+.forum-header p {
+  color: #dddddd;
+  font-size: 1.2rem;
+}
+
+/* Categories Section */
+.forum-categories h2,
+.forum-threads h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #00ffff;
+}
+.category, .thread {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, background 0.3s;
+}
+.category:hover, .thread:hover {
+  transform: scale(1.02);
+  background: rgba(0, 170, 255, 0.1);
+}
+.category h3, .thread h3 {
+  font-size: 1.5rem;
+  color: #00aaff;
+}
+.category p, .thread p {
+  font-size: 1rem;
+  color: #bbbbbb;
+}
+
+/* New Post Section */
+.new-post textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.new-post textarea:focus {
+  outline: none;
+  border-color: #00aaff;
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+}
+.new-post button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #ffffff;
+  background: linear-gradient(45deg, #0055ff, #00aaff);
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s, transform 0.3s;
+}
+.new-post button:hover {
+  background: linear-gradient(45deg, #00aaff, #00ffff);
+  transform: scale(1.1);
 }
 
-.modal-close:hover {
-  transform: scale(1.4);
+/* General Button Styles */
+.forum-button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  background: linear-gradient(45deg, #00aaff, #0055ff);
+  color: white;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 170, 255, 0.5), 0 0 20px rgba(0, 0, 255, 0.3);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  text-align: center;
+  transform-origin: center center;
+  display: inline-block;
 }
 
-.modal-close:active {
-  transform: scale(0.9);
+/* Bold and Shiny Effect */
+.forum-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 80%);
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Hover Effects */
+.forum-button:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 10px 30px rgba(0, 170, 255, 0.7), 0 0 50px rgba(0, 0, 255, 0.5);
+  background: linear-gradient(45deg, #0055ff, #00aaff);
+}
+
+.forum-button:hover::before {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Pulsing Animation on Hover */
+.forum-button:hover {
+  animation: pulseAnimation 1s ease-in-out infinite;
+}
+
+/* 3D "Press" Effect */
+.forum-button:active {
+  transform: scale(0.98) translateY(4px);
+  box-shadow: 0 3px 10px rgba(0, 170, 255, 0.6);
+}
+
+/* Pulse Effect */
+@keyframes pulseAnimation {
+  0% {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 170, 255, 0.7), 0 0 50px rgba(0, 0, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 15px 40px rgba(0, 170, 255, 0.9), 0 0 60px rgba(0, 0, 255, 0.6);
+  }
+  100% {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 170, 255, 0.7), 0 0 50px rgba(0, 0, 255, 0.5);
+  }
+}
+
+/* Button Text */
+.forum-button span {
+  position: relative;
+  z-index: 1;
 }
