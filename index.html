@@ -1,584 +1,486 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-Y71QM9DR66"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Russo+One&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <!-- Include Particle.js -->
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000066">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="games.css">
+  <link rel="stylesheet" href="game.css">
+  <meta name="robots" content="noindex,nofollow" />
+<link rel="manifest" href="/web-app-manifest/manifest.json">
+  <meta name="sentry-trace" content="b2028861a48846e78cb5d94354101f19-33859ae36a93403a-0"/>
+  <title>Dashboard</title>
 
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date()); 
-
-      gtag("config", "G-Y71QM9DR66");
-    </script>
-   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Initialize particles.js
-      particlesJS("particles-js", {
-        particles: {
-          number: {
-            value: 50, // Number of particles
-            density: {
-              enable: true,
-              value_area: 800, // Density of particles
-            },
-          },
-          color: {
-            value: "#ffffff", // Particle color
-          },
-          shape: {
-            type: "circle", // Shape of particles
-          },
-          opacity: {
-            value: 0.5, // Opacity of particles
-            random: true,
-          },
-          size: {
-            value: 3, // Size of particles
-            random: true,
-          },
-          line_linked: {
-            enable: true,
-            distance: 150, // Distance for linking particles
-            color: "#ffffff",
-            opacity: 0.4,
-            width: 1,
-          },
-          move: {
-            enable: true,
-            speed: 3, // Speed of particle movement
-            direction: "none",
-            random: false,
-            straight: false,
-            out_mode: "out", // Particles go outside the canvas
-            bounce: false,
-          },
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: {
-              enable: true,
-              mode: "repulse", // Particles move away on hover
-            },
-            onclick: {
-              enable: true,
-              mode: "push", // Add more particles on click
-            },
-          },
-          modes: {
-            repulse: {
-              distance: 100, // Distance for repulsion
-            },
-          },
-        },
-        retina_detect: true, // Retina support
-      });
+  <link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/extended/Lato-Regular-bd03a2cc27.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/extended/Lato-Bold-cccb897485.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/extended/Lato-Italic-4eb103b4d1.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/no_variables/bundles/fonts-6ee09b0b2f.css" media="screen" />
+  <link rel="stylesheet" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/d2f387cc5f0bf2415537b8f67241b6b0/variables-7dd4b80918af0e0218ec0229e4bd5873.css" media="all" />
+  <link rel="stylesheet" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/common-d39af8c1ac.css" media="all" />
+  <link rel="stylesheet" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/react_todo_sidebar-df089b77a5.css" media="screen" />
+  <link rel="stylesheet" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/dashboard-a8b88f8512.css" media="screen" />
+  <link rel="stylesheet" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/dashboard_card-c77dbc9c96.css" media="screen" />
+  <link rel="stylesheet" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/new_user_tutorials-6b15f87caf.css" media="screen" />
+  <link rel="apple-touch-icon" href="https://du11hjcvx0uqb.cloudfront.net/dist/images/apple-touch-icon-585e5d997d.png" />
+  <link rel="icon" type="image/x-icon" href="https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico" />
+  <link rel="alternate" type="application/atom+xml" title="User Atom Feed (All Courses)" href="/feeds/users/user_Un9tvlwsVi0sbJQ5umB91PIAbHzHfCo3ia10b9ac.atom" />
+  <link rel="stylesheet" href="https://instructure-uploads.s3.amazonaws.com/account_76110000000000001/attachments/16986043/issaquah.css" media="all" />
   
-      // Hide preloader after loading
-      const preloader = document.querySelector(".preloader");
-      setTimeout(() => {
-        preloader.classList.add("hidden"); // Fade out preloader
-      }, 2000); // Simulate loading time
-    });
+  <script>if (navigator.userAgent.match(/(MSIE|Trident\/)/)) location.replace('/ie-is-not-supported.html')</script>
+  <script>
+    INST = {"environment":"production","logPageViews":true,"editorButtons":[]};
+    ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/d2f387cc5f0bf2415537b8f67241b6b0/variables-7dd4b80918af0e0218ec0229e4bd5873.json","active_brand_config":{"md5":"d2f387cc5f0bf2415537b8f67241b6b0","variables":{"ic-brand-global-nav-bgd":"#000066","ic-brand-global-nav-ic-icon-svg-fill--active":"#343232","ic-brand-global-nav-menu-item__text-color--active":"#343232","ic-brand-global-nav-menu-item__badge-bgd":"#969694","ic-brand-global-nav-menu-item__badge-bgd--active":"#969694","ic-brand-global-nav-menu-item__badge-text":"#ffffff","ic-brand-global-nav-logo-bgd":"#000066","ic-brand-header-image":"https://instructure-uploads.s3.amazonaws.com/account_76110000000000001/attachments/9160839/Middle%20Schools_Beaver%20Lake%20-%20icon%20only.png"},"share":false,"name":null,"created_at":"2025-03-12T08:44:25-07:00","js_overrides":"","css_overrides":"","mobile_js_overrides":"","mobile_css_overrides":"","parent_md5":"dae10aecb050c1c8aa86b781cd57aaea"},"confetti_branding_enabled":false,"url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/d2f387cc5f0bf2415537b8f67241b6b0/variables-7dd4b80918af0e0218ec0229e4bd5873.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-90e5ad1077.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/no_variables/bundles/fonts-6ee09b0b2f.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-7dd4b80918af0e0218ec0229e4bd5873.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-795277483f.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/no_variables/bundles/fonts-6ee09b0b2f.css"],"current_user_id":"99724","current_user_global_id":"76110000000099724","current_user_usage_metrics_id":"602c38504ef8b67ba0dc3ca3981033f917c109aec0a0e13b9a65a4685011f05b","current_user_roles":["user","student"],"current_user_is_student":false,"current_user_types":[],"current_user_disabled_inbox":false,"current_user_visited_tabs":null,"discussions_reporting":true,"files_domain":"cluster214.canvas-user-content.com","group_information":null,"DOMAIN_ROOT_ACCOUNT_ID":"76110000000000001","DOMAIN_ROOT_ACCOUNT_UUID":"74DU4jHLwWrOszkpwm0U3ymErhfZpO8SFcvxXHgh","k12":false,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"auto_show_cc":false,"disable_celebrations":false,"disable_keyboard_shortcuts":false,"LTI_LAUNCH_FRAME_ALLOWANCES":["geolocation *","microphone *","camera *","midi *","encrypted-media *","autoplay *","clipboard-write *","display-capture *"],"DEEP_LINKING_POST_MESSAGE_ORIGIN":"https://issaquah.instructure.com","comment_library_suggestions_enabled":false,"SETTINGS":{"open_registration":false,"collapse_global_nav":false,"release_notes_badge_disabled":false,"can_add_pronouns":true,"show_sections_in_course_tray":false},"RAILS_ENVIRONMENT":"Production","SENTRY_FRONTEND":{"dsn":"https://355a1d96717e4038ac25aa852fa79a8f@relay-iad.sentry.insops.net/388","org_slug":"instructure","base_url":"https://sentry.insops.net","normalized_route":"/","errors_sample_rate":"0.005","traces_sample_rate":"0.005","url_deny_pattern":"instructure-uploads.*amazonaws.com","revision":"canvas-lms@20250312.345"},"DATA_COLLECTION_ENDPOINT":"https://canvas-frontend-data-iad-prod.inscloudgate.net/submit","KILL_JOY":true,"DOMAIN_ROOT_ACCOUNT_SFID":"001A000000toULbIAM","DIRECT_SHARE_ENABLED":false,"CAN_VIEW_CONTENT_SHARES":false,"FEATURES":{"account_level_blackout_dates":false,"render_both_to_do_lists":false,"commons_new_quizzes":true,"course_paces_redesign":true,"course_paces_for_students":true,"explicit_latex_typesetting":false,"permanent_page_links":true,"enhanced_course_creation_account_fetching":false,"instui_for_import_page":false,"multiselect_gradebook_filters":true,"assignment_edit_placement_not_on_announcements":false,"instui_header":false,"rce_find_replace":true,"courses_popout_sisid":true,"dashboard_graphql_integration":false,"discussion_checkpoints":false,"discussion_default_sort":false,"discussion_default_expand":false,"speedgrader_studio_media_capture":true,"disallow_threaded_replies_fix_alert":true,"horizon_course_setting":false,"new_quizzes_media_type":true,"differentiation_tags":false,"validate_call_to_action":false,"product_tours":false,"create_course_subaccount_picker":true,"file_verifiers_for_quiz_links":true,"lti_deep_linking_module_index_menu_modal":true,"lti_registrations_next":false,"lti_registrations_page":false,"lti_asset_processor":false,"buttons_and_icons_root_account":true,"extended_submission_state":false,"scheduled_page_publication":true,"send_usage_metrics":false,"rce_transform_loaded_content":false,"mobile_offline_mode":false,"react_discussions_post":true,"instui_nav":false,"lti_registrations_discover_page":false,"account_level_mastery_scales":true,"non_scoring_rubrics":true,"top_navigation_placement":false,"rubric_criterion_range":true,"rce_lite_enabled_speedgrader_comments":true,"lti_toggle_placements":true,"login_registration_ui_identity":false,"lti_apps_page_instructors":false,"course_paces_skip_selected_days":false,"course_pace_download_document":false,"course_pace_draft_state":false,"course_pace_time_selection":false,"course_pace_pacing_status_labels":false,"course_pace_pacing_with_mastery_paths":false,"course_pace_weighted_assignments":false,"modules_requirements_allow_percentage":false,"course_pace_allow_bulk_pace_assign":false,"account_survey_notifications":false,"embedded_release_notes":true,"consolidated_media_player":false,"discussions_speedgrader_revisit":false,"canvas_k6_theme":null,"new_math_equation_handling":true},"current_user":{"id":"99724","anonymous_id":"24y4","display_name":"Nooh Siddique","avatar_image_url":"https://issaquah.instructure.com/images/thumbnails/15110901/mQ3VnhGD7fKNxlAn8TqRj9MeHnxcrAzcLZ5YK24Z","html_url":"https://issaquah.instructure.com/about/99724","pronouns":null,"avatar_is_fallback":false,"email":"siddnoo31@issaquah.wednet.edu"},"page_view_update_url":"/page_views/25ee238d-979b-40e4-b9e4-7d050d3c9987?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiMjVlZTIzOGQtOTc5Yi00MGU0LWI5ZTQtN2QwNTBkM2M5OTg3IiwidSI6NzYxMTAwMDAwMDAwOTk3MjQsImMiOiIyMDI1LTAzLTEyVDIxOjEyOjUyLjYwWiJ9.viBO80pHuuwLAdFDHVjFb-vXS5cuhj6h7J8JDQuI48E","context_asset_string":null,"TIMEZONE":"America/Los_Angeles","CONTEXT_TIMEZONE":null,"LOCALES":["en"],"BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","rce_auto_save_max_age_ms":86400000,"K5_USER":false,"USE_CLASSIC_FONT":false,"K5_HOMEROOM_COURSE":false,"K5_SUBJECT_COURSE":false,"LOCALE_TRANSLATION_FILE":"/dist/javascripts/translations/en-d4dfe69052.json","ACCOUNT_ID":"1","user_cache_key":"VW45dHZsd3NWaTBzYkpRNXVtQjkxUElBYkh6SGZDbzNpYTEwYjlhY3Z5Zlc9\nO1twLTA/OntQXz1IVXBncmFxZTtuamFsa2hwdm9pdWxraW1tYXFld2c=\n","horizon_course":false,"INCOMPLETE_REGISTRATION":null,"USER_EMAIL":"siddnoo31@issaquah.wednet.edu","PREFERENCES":{"dashboard_view":"cards","hide_dashcard_color_overlays":true,"custom_colors":{"course_38141":"#E1185C","user_99724":"#4a76b2","course_34272":"#E1185C","course_34172":"#0B9BE3","course_34557":"#626E7B","course_33996":"#0076B8","course_34670":"#177B63","course_34505":"#2573df","course_38993":"#008400","course_31479":"#177B63","course_38309":"#65499D","course_34678":"#4D3D4D","course_34282":"#626E7B","course_34512":"#0076B8","course_34167":"#4D3D4D","course_34007":"#986C16","course_33952":"#677d2b"}},"STUDENT_PLANNER_ENABLED":true,"STUDENT_PLANNER_COURSES":[{"longName":"SOCIAL STUDIES 6 B_Sylvester_TR2 - SOCIAL STUDIES 6 B_Sylvester_TR2","shortName":"SOCIAL STUDIES 6 B_Sylvester_TR2","originalName":"SOCIAL STUDIES 6 B_Sylvester_TR2","courseCode":"SOCIAL STUDIES 6 B_Sylvester_TR2","assetString":"course_34007","href":"/courses/34007","term":"2024-2025 TR2","subtitle":"enrolled as: Student","enrollmentState":"active","enrollmentType":"StudentEnrollment","observee":null,"id":"34007","isFavorited":true,"isK5Subject":false,"isHomeroom":false,"useClassicFont":false,"canManage":false,"canReadAnnouncements":true,"image":"https://inst-fs-iad-prod.inscloudgate.net/files/1bc13197-7a7a-4378-9721-a2f181ab7f3a/Giza.jpg?download=1\u0026token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3NDE1NTAwMTAsInVzZXJfaWQiOm51bGwsInJlc291cmNlIjoiL2ZpbGVzLzFiYzEzMTk3LTdhN2EtNDM3OC05NzIxLWEyZjE4MWFiN2YzYS9HaXphLmpwZyIsImp0aSI6ImE4YmEwOTc1LWJmNDUtNGQwMi05ZDE2LWE5YTAxMDMyNDg2NyIsImhvc3QiOm51bGwsImV4cCI6MTc0MjE1NDgxMH0.v9IYEvDv91WcGkVTc3UqvvhxnPXoSwkU6437XxKB2JzS4eF_MGr17wysSeU7zd1hMkq5Ogp76IBZ3hLq34EPoA","color":null,"position":0,"published":true,"canChangeCoursePublishState":false,"defaultView":"wiki","pagesUrl":"https://issaquah.instructure.com/courses/34007/pages","frontPageTitle":"Welcome to 6th Grade Social Studies Trimester 2"},{"longName":"MATH 2-3 B_Pullins_TR2 - MATH 2-3 B_Pullins_TR2","shortName":"MATH 2-3 B_Pullins_TR2","originalName":"MATH 2-3 B_Pullins_TR2","courseCode":"MATH 2-3 B_Pullins_TR2","assetString":"course_34512","href":"/courses/34512","term":"2024-2025 TR2","subtitle":"enrolled as: Student","enrollmentState":"active","enrollmentType":"StudentEnrollment","observee":null,"id":"34512","isFavorited":true,"isK5Subject":false,"isHomeroom":false,"useClassicFont":false,"canManage":false,"canReadAnnouncements":true,"image":"https://inst-fs-iad-prod.inscloudgate.net/files/d70b0727-6994-42dc-b262-92359a1d9f0c/Math2-3%20Tri%202%20Card.png?download=1\u0026token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3NDE2MDk4NzYsInVzZXJfaWQiOm51bGwsInJlc291cmNlIjoiL2ZpbGVzL2Q3MGIwNzI3LTY5OTQtNDJkYy1iMjYyLTkyMzU5YTFkOWYwYy9NYXRoMi0zJTIwVHJpJTIwMiUyMENhcmQucG5nIiwianRpIjoiNzQ2OTU3ODctYWJkNC00ZTgxLWI1YTctMDYzYmZkMGNkNGQ0IiwiaG9zdCI6bnVsbCwiZXhwIjoxNzQyMjE0Njc2fQ.1pyYrFkCyBjEWwC64cah7A7Owmq2eccMEcStNfukC-TAGoRbrGInTIy-Wn8mYL5_RAfQ8WNB9td8ZUTreueB2w","color":null,"position":1,"published":true,"canChangeCoursePublishState":false,"defaultView":"wiki","pagesUrl":"https://issaquah.instructure.com/courses/34512/pages","frontPageTitle":"Welcome to Math 2-3!"},{"longName":"EARTH AND SPACE SCIENCE B_Hafner_TR2 - EARTH AND SPACE SCIENCE B_Hafner_TR2","shortName":"EARTH AND SPACE SCIENCE B_Hafner_TR2","originalName":"EARTH AND SPACE SCIENCE B_Hafner_TR2","courseCode":"EARTH AND SPACE SCIENCE B_Hafner_TR2","assetString":"course_34678","href":"/courses/34678","term":"2024-2025 TR2","subtitle":"enrolled as: Student","enrollmentState":"active","enrollmentType":"StudentEnrollment","observee":null,"id":"34678","isFavorited":true,"isK5Subject":false,"isHomeroom":false,"useClassicFont":false,"canManage":false,"canReadAnnouncements":true,"image":"https://inst-fs-iad-prod.inscloudgate.net/files/4a58a742-6fa7-4f4b-9137-25dfdd0079b4/weather%20image.jpg?download=1\u0026token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3NDE3MTM2ODMsInVzZXJfaWQiOm51bGwsInJlc291cmNlIjoiL2ZpbGVzLzRhNThhNzQyLTZmYTctNGY0Yi05MTM3LTI1ZGZkZDAwNzliNC93ZWF0aGVyJTIwaW1hZ2UuanBnIiwianRpIjoiNTBjODlkYWUtYjdlZC00NmM0LWJkYTItOWQ1NDUyYzBiZDg3IiwiaG9zdCI6bnVsbCwiZXhwIjoxNzQyMzE4NDgzfQ.XwA75wK_4kU43ZaIxSB_fJrRWGd69jybKUacYEvlopn-2HD4Sejt8qIK5zS9ox2sNVXJEBiTbCUrFrPBu4kovw","color":null,"position":2,"published":true,"canChangeCoursePublishState":false,"defaultView":"wiki","pagesUrl":"https://issaquah.instructure.com/courses/34678/pages","frontPageTitle":"Welcome to Earth and Space Science 2024-25"},{"longName":"BLMS Science Olympiad - BLMS","shortName":"BLMS Science Olympiad","originalName":"BLMS Science Olympiad","courseCode":"BLMS","assetString":"course_31479","href":"/courses/31479","term":null,"subtitle":"enrolled as: Student","enrollmentState":"active","enrollmentType":"StudentEnrollment","observee":null,"id":"31479","isFavorited":true,"isK5Subject":false,"isHomeroom":false,"useClassicFont":false,"canManage":false,"canReadAnnouncements":true,"image":"https://inst-fs-iad-prod.inscloudgate.net/files/6bf11e97-5af7-4e9c-a0ec-a3f0422d4b1f/SOINC.png?download=1\u0026token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3NDE1NTkxMjYsInVzZXJfaWQiOm51bGwsInJlc291cmNlIjoiL2ZpbGVzLzZiZjExZTk3LTVhZjctNGU5Yy1hMGVjLWEzZjA0MjJkNGIxZi9TT0lOQy5wbmciLCJqdGkiOiJhMmJhMjE3NS1jMjA4LTRmOTctOWY3Yi0xZWEyODhmMmFkZTMiLCJob3N0IjpudWxsLCJleHAiOjE3NDIxNjM5MjZ9.34qjd6b7XMSkZKmNUPMmewedWnhnrWcDcPLmqp5V8QQ4qpoUZqK52At5b2A4WDMvGiTKkqwAORioBIjuzND3DQ","color":null,"position":3,"published":true,"canChangeCoursePublishState":false,"defaultView":"wiki","pagesUrl":"https://issaquah.instructure.com/courses/31479/pages","frontPageTitle":"Welcome to Science Olympiad BLAST "},{"longName":"ADVANCED LANGUAGE ARTS 6 B_Dang_TR2 - ADVANCED LANGUAGE ARTS 6 B_Dang_TR2","shortName":"ADVANCED LANGUAGE ARTS 6 B_Dang_TR2","originalName":"ADVANCED LANGUAGE ARTS 6 B_Dang_TR2","courseCode":"ADVANCED LANGUAGE ARTS 6 B_Dang_TR2","assetString":"course_34282","href":"/courses/34282","term":"2024-2025 TR2","subtitle":"enrolled as: Student","enrollmentState":"active","enrollmentType":"StudentEnrollment","observee":null,"id":"34282","isFavorited":true,"isK5Subject":false,"isHomeroom":false,"useClassicFont":false,"canManage":false,"canReadAnnouncements":true,"image":"https://inst-fs-iad-prod.inscloudgate.net/files/882c8743-6e43-4147-8a6e-dfa153763ae5/Colorful%20Books%20Welcome%20Back%20To%20School%20Poster%20%28Presentation%20%28169%29%29%20%282%29.jpg?download=1\u0026token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3NDE2Nzc4MjMsInVzZXJfaWQiOm51bGwsInJlc291cmNlIjoiL2ZpbGVzLzg4MmM4NzQzLTZlNDMtNDE0Ny04YTZlLWRmYTE1Mzc2M2FlNS9Db2xvcmZ1bCUyMEJvb2tzJTIwV2VsY29tZSUyMEJhY2slMjBUbyUyMFNjaG9vbCUyMFBvc3RlciUyMCUyOFByZXNlbnRhdGlvbiUyMCUyODE2OSUyOSUyOSUyMCUyODIlMjkuanBnIiwianRpIjoiYzBiMzIwMzUtOWM5ZS00NmExLTkyYWYtOThiYmFlZDJhMjBjIiwiaG9zdCI6bnVsbCwiZXhwIjoxNzQyMjgyNjIzfQ.tXuwdVn2clevidoplZkAMTjL5tuIr8eY-1RThHPz_18HosVDGIRc8mVRpsX_6iY8NCKqwOHAfIXW_0MGypyOOw","color":null,"position":4,"published":true,"canChangeCoursePublishState":false,"defaultView":"wiki","pagesUrl":"https://issaquah.instructure.com/courses/34282/pages","frontPageTitle":"Home Page"},{"longName":"STEM-SAMPLER_Clymer_TR2 - STEM-SAMPLER_Clymer_TR2","shortName":"STEM-SAMPLER_Clymer_TR2","originalName":"STEM-SAMPLER_Clymer_TR2","courseCode":"STEM-SAMPLER_Clymer_TR2","assetString":"course_33952","href":"/courses/33952","term":"2024-2025 TR2","subtitle":"enrolled as: Student","enrollmentState":"active","enrollmentType":"StudentEnrollment","observee":null,"id":"33952","isFavorited":true,"isK5Subject":false,"isHomeroom":false,"useClassicFont":false,"canManage":false,"canReadAnnouncements":true,"image":"https://inst-fs-iad-prod.inscloudgate.net/files/87d51369-1b34-4264-83c0-55f7d2e80249/STEM%20Banner.jpg?download=1\u0026token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3NDE1MjM0MzMsInVzZXJfaWQiOm51bGwsInJlc291cmNlIjoiL2ZpbGVzLzg3ZDUxMzY5LTFiMzQtNDI2NC04M2MwLTU1ZjdkMmU4MDI0OS9TVEVNJTIwQmFubmVyLmpwZyIsImp0aSI6IjRlMWEyZmEwLTc3ZWUtNDBkOC1iMDc5LWIwY2NkN2NlMmIxNiIsImhvc3QiOm51bGwsImV4cCI6MTc0MjEyODIzM30.CiRk7LmKky4KzAXP0KOH9wrj450_zf0G3lt8KQ2bGJgy8MgK3wmAMGlXyXc74ruHnztWpsMR45WJJEsk_EgiqQ","color":null,"position":5,"published":true,"canChangeCoursePublishState":false,"defaultView":"wiki","pagesUrl":"https://issaquah.instructure.com/courses/33952/pages","frontPageTitle":"Welcome"},{"longName":"BLMS Math Club 24-25 - BLMS 24-25","shortName":"BLMS Math Club 24-25","originalName":"BLMS Math Club 24-25","courseCode":"BLMS 24-25","assetString":"course_38993","href":"/courses/38993","term":null,"subtitle":"enrolled as: Student","enrollmentState":"active","enrollmentType":"StudentEnrollment","observee":null,"id":"38993","isFavorited":true,"isK5Subject":false,"isHomeroom":false,"useClassicFont":false,"canManage":false,"canReadAnnouncements":true,"image":null,"color":null,"position":6,"published":true,"canChangeCoursePublishState":false,"defaultView":"wiki","pagesUrl":"https://issaquah.instructure.com/courses/38993/pages","frontPageTitle":"Welcome"},{"longName":"BLMS Student Commons - BLMS Student Commons","shortName":"BLMS Student Commons","originalName":"BLMS Student Commons","courseCode":"BLMS Student Commons","assetString":"course_38141","href":"/courses/38141","term":"2024-2025 YR","subtitle":"enrolled as: Student","enrollmentState":"active","enrollmentType":"StudentEnrollment","observee":null,"id":"38141","isFavorited":true,"isK5Subject":false,"isHomeroom":false,"useClassicFont":false,"canManage":false,"canReadAnnouncements":true,"image":"https://inst-fs-iad-prod.inscloudgate.net/files/5d7b11d9-e41c-4afd-9702-7fbb0c6c0821/Welcome%20Bulldog%20Readers.png?download=1\u0026token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3NDE1OTg2MjUsInVzZXJfaWQiOm51bGwsInJlc291cmNlIjoiL2ZpbGVzLzVkN2IxMWQ5LWU0MWMtNGFmZC05NzAyLTdmYmIwYzZjMDgyMS9XZWxjb21lJTIwQnVsbGRvZyUyMFJlYWRlcnMucG5nIiwianRpIjoiMjdlMzQ4YTItMWJiZS00Zjg3LWJjOTAtOTVhNGM5MWY2OTRiIiwiaG9zdCI6bnVsbCwiZXhwIjoxNzQyMjAzNDI1fQ.KyTQc85A-R9vp0sJ3f7P6yZJSqQEGumXaBeOlfhWYItW5QUoo9OTYmSV_cvnvoS_OKmYXkeR1ucOqD94g0sSgg","color":null,"position":7,"published":true,"canChangeCoursePublishState":false,"defaultView":"wiki","pagesUrl":"https://issaquah.instructure.com/courses/38141/pages","frontPageTitle":"School Resources"},{"longName":"HEALTH 6_Cullen_TR2 - HEALTH 6_Cullen_TR2","shortName":"HEALTH 6_Cullen_TR2","originalName":"HEALTH 6_Cullen_TR2","courseCode":"HEALTH 6_Cullen_TR2","assetString":"course_34167","href":"/courses/34167","term":"2024-2025 TR2","subtitle":"enrolled as: Student","enrollmentState":"active","enrollmentType":"StudentEnrollment","observee":null,"id":"34167","isFavorited":true,"isK5Subject":false,"isHomeroom":false,"useClassicFont":false,"canManage":false,"canReadAnnouncements":true,"image":"https://inst-fs-iad-prod.inscloudgate.net/files/7e14f6c6-cf6c-48ea-ac83-8278f565dd1d/Life%20Science.png?download=1\u0026token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3NDE3NDIzMjAsInVzZXJfaWQiOm51bGwsInJlc291cmNlIjoiL2ZpbGVzLzdlMTRmNmM2LWNmNmMtNDhlYS1hYzgzLTgyNzhmNTY1ZGQxZC9MaWZlJTIwU2NpZW5jZS5wbmciLCJqdGkiOiJlZTQ4YmQwMi1iNTUyLTRiZDUtODUxOC03YjJiZDRlNWE3MWQiLCJob3N0IjpudWxsLCJleHAiOjE3NDIzNDcxMjB9.FdgktAtFvSoB7alvjGZw6WbBYdEQfhV1RXQFEb-b9NJoUKN_XluhV9_Q-Mon7_wAyQz87Ds1ARVskmi2noKgBQ","color":null,"position":8,"published":true,"canChangeCoursePublishState":false,"defaultView":"wiki","pagesUrl":"https://issaquah.instructure.com/courses/34167/pages","frontPageTitle":"Welcome"}],"STUDENT_PLANNER_GROUPS":[],"ALLOW_ELEMENTARY_DASHBOARD":false,"CREATE_COURSES_PERMISSIONS":{"PERMISSION":null,"RESTRICT_TO_MCC_ACCOUNT":false},"OBSERVED_USERS_LIST":[{"id":"99724","name":"Nooh Siddique","created_at":"2024-06-11T16:00:51-07:00","sortable_name":"Siddique, Nooh","short_name":"Nooh Siddique","avatar_url":"https://issaquah.instructure.com/images/thumbnails/15110901/mQ3VnhGD7fKNxlAn8TqRj9MeHnxcrAzcLZ5YK24Z"}],"CAN_ADD_OBSERVEE":false,"notices":[],"active_context_tab":null};
+    BRANDABLE_CSS_HANDLEBARS_INDEX = [["new_styles_normal_contrast","new_styles_high_contrast","new_styles_normal_contrast_rtl","new_styles_high_contrast_rtl"],{"10":["908ffbc673",0,"d5c9044c6e",2],"15":["c8540c43a4",0,"0a2196be1d",2],"19":["df5777ed9c"],"61":["b8f6d0d1fa","c3396c44a9","cfc0690334","1c0f3762fa"],"67":["700335fb7b",0,"1cc2485e2c",2],"71":["8ac0336ef0","bf3093677a","a8146a011b","449171073f"],"06":["ba28819778",0,"96b99aafe5",2],"f0":["b349f31f5e",0,0,0],"c8":["718c8509f5","33cd4c40e3","03d0fbcbe8","ec23096f0d"],"1e":["6eb4ecac8e","4100cb65ce","0faf4716c8","bed54fd75e"],"b3":["e5da23fb43","0911fc8ed3","05b2bb5a6f","ba2585de5c"],"0c":["4dae5befd2",0,"c18876be89",2],"da":["b5a7f9cd8f","a4e5066985","773390ae11","8e9071910c"],"1d":["2128789890",0,"e568085637",2],"08":["64bff5a97d"],"e2":["272b92b386"],"9f":["d39b291ba6",0,0,0],"2b":["c491abf31e","b11dc54da6","b58622671f","6bb4a7ae9e"],"2c":["8a926fc28b",0,0,0],"c2":["6f2721ae01"],"9c":["c31821c764",0,"1693aba1da",2],"c5":["44c6024769","31150a4a27","53dd277fa9","5fe61c91c2"],"f2":["51574f9b13"]}]
+      REMOTES = {};
   </script>
+  <script src="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/d2f387cc5f0bf2415537b8f67241b6b0/variables-7dd4b80918af0e0218ec0229e4bd5873.js" defer="defer"></script>
+  <script src="https://du11hjcvx0uqb.cloudfront.net/dist/timezone/America/Los_Angeles-6699c54112.js" defer="defer"></script>
+  <script src="https://du11hjcvx0uqb.cloudfront.net/dist/timezone/en_US-80a0ce259b.js" defer="defer"></script>
+  <script src="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/react-entry-d296c7f9fc2ea0eb.js" crossorigin="anonymous" defer="defer"></script>
+  <script src="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/main-entry-094a818042911b04.js" crossorigin="anonymous" defer="defer"></script>
+<script>
+//<![CDATA[
+(window.bundles || (window.bundles = [])).push('dashboard');
+(window.bundles || (window.bundles = [])).push('past_global_alert');
+(window.bundles || (window.bundles = [])).push('navigation_header');
+//]]>
+</script>
   
-    
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title class="cloak">Quadratics</title>
-    <link class="favicon" rel="icon" type="image/x-icon" href="/logo.png" />
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="game.css" type="text/css" />
-   
-  </head>
-  <body>
-   
+  
+</head>
 
-    <div id="particles-js"></div>
-    
-   <center>
-    <h1>Nooh's sensational learning(TOTALLY) hub</h1>
-    </center>
-    
-     
-     
-      <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          const container = document.querySelector(".games-container");
-          const games = document.querySelectorAll(".game");
-      
-          // Add a delay to stagger animations
-          games.forEach((game, index) => {
-            game.style.animationDelay = `${index * 0.2}s`; // Adjust delay for each game
-          });
-      
-          // Remove the "hidden" class to trigger animations
-          container.classList.add("loaded");
-        });
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<body class="with-right-side  primary-nav-expanded full-width context-user_99724 responsive_student_grades_page">
 
-      <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          const preloader = document.querySelector(".preloader");
-          const gamesContainer = document.querySelector(".games-container");
-      
-          // Simulate loading time (replace this with actual data fetching if needed)
-          setTimeout(() => {
-            preloader.classList.add("hidden"); // Hide preloader
-            gamesContainer.classList.add("loaded"); // Start games animation
-          }, 10000); // Adjust time as needed
-        });
-      </script>
-      
-      <div class="preloader">
-        <div id="particles-js"></div>
-        <div class="preloader-content">
-          <center>
-          <div class="spinner"></div>
-          <br>
-          <h1>You've got to admit, 3500+ games takes some time to Load...</h1>
-          <br>
-          <h2>IN COURTESY OF NOOH THE GREAT</h2>
-          </center>
+<noscript>
+  <div role="alert" class="ic-flash-static ic-flash-error">
+    <div class="ic-flash__icon" aria-hidden="true">
+      <i class="icon-warning"></i>
+    </div>
+    <h1>You need to have JavaScript enabled in order to access this site.</h1>
+  </div>
+</noscript>
+
+
+
+
+<div id="flash_message_holder"></div>
+<div id="flash_screenreader_holder"></div>
+
+<div id="application" class="ic-app">
+  
+
+
+
+
+<header id="mobile-header" class="no-print">
+  <button type="button" class="Button Button--icon-action-rev Button--large mobile-header-hamburger">
+    <i class="icon-solid icon-hamburger"></i>
+    <span id="mobileHeaderInboxUnreadBadge" class="menu-item__badge" style="min-width: 0; top: 12px; height: 12px; right: 6px; display:none;"></span>
+    <span class="screenreader-only">Dashboard</span>
+  </button>
+  <div class="mobile-header-space"></div>
+    <span class="mobile-header-title">Dashboard</span>
+    <div class="mobile-header-space"></div>
+    <div class="mobile-header-space"></div>
+</header>
+<nav id="mobileContextNavContainer"></nav>
+
+<header id="header" class="ic-app-header no-print " aria-label="Global Header">
+  <a href="#content" id="skip_navigation_link">Skip To Content</a>
+  <div role="region" class="ic-app-header__main-navigation" aria-label="Global Navigation">
+      <div class="ic-app-header__logomark-container">
+        <a href="https://issaquah.instructure.com/" class="ic-app-header__logomark">
+          <span class="screenreader-only">Dashboard</span>
+        </a>
+      </div>
+    <ul id="menu" class="ic-app-header__menu-list">
+        <li class="menu-item ic-app-header__menu-list-item ">
+          <a id="global_nav_profile_link" role="button" href="/profile/settings" class="ic-app-header__menu-list-link">
+            <div class="menu-item-icon-container">
+              <div aria-hidden="true" class="fs-exclude ic-avatar ">
+                <img src="https://issaquah.instructure.com/images/thumbnails/15110901/mQ3VnhGD7fKNxlAn8TqRj9MeHnxcrAzcLZ5YK24Z" alt="Nooh Siddique" />
+              </div>
+              <span class="menu-item__badge"></span>
+            </div>
+            <div class="menu-item__text">
+              Account
+            </div>
+          </a>
+        </li>
+      <li class="ic-app-header__menu-list-item  ic-app-header__menu-list-item--active">
+        <a id="global_nav_dashboard_link" href="https://issaquah.instructure.com/" class="ic-app-header__menu-list-link">
+          <div class="menu-item-icon-container" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z" /></svg>
+
+          </div>
+          <div class="menu-item__text">
+            Dashboard
+          </div>
+        </a>
+      </li>
+        <li class="menu-item ic-app-header__menu-list-item ">
+          <a id="global_nav_courses_link" role="button" href="/courses" class="ic-app-header__menu-list-link">
+            <div class="menu-item-icon-container" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"/></svg>
+
+            </div>
+            <div class="menu-item__text">
+              Courses
+            </div>
+          </a>
+        </li>
+      <li class="menu-item ic-app-header__menu-list-item ">
+        <a id="global_nav_calendar_link" href="/calendar" class="ic-app-header__menu-list-link">
+          <div class="menu-item-icon-container" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"/></svg>
+
+          </div>
+          <div class="menu-item__text">
+            Calendar
+          </div>
+        </a>
+      </li>
+      <li class="menu-item ic-app-header__menu-list-item ">
+      <!-- TODO: Add back global search when available -->
+        <a id="global_nav_conversations_link" href="/conversations" class="ic-app-header__menu-list-link">
+          <div class="menu-item-icon-container">
+            <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"/></svg>
+</span>
+            <span class="menu-item__badge"></span>
+          </div>
+          <div class="menu-item__text">
+            Inbox
+          </div>
+        </a>
+      </li>
+        <li class="menu-item ic-app-header__menu-list-item" >
+          <a id="global_nav_history_link" role="button" href="#" class="ic-app-header__menu-list-link">
+            <div class="menu-item-icon-container" aria-hidden="true">
+              <svg viewBox="0 0 1920 1920" class="ic-icon-svg menu-item__icon svg-icon-history" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path d="M960 112.941c-467.125 0-847.059 379.934-847.059 847.059 0 467.125 379.934 847.059 847.059 847.059 467.125 0 847.059-379.934 847.059-847.059 0-467.125-379.934-847.059-847.059-847.059M960 1920C430.645 1920 0 1489.355 0 960S430.645 0 960 0s960 430.645 960 960-430.645 960-960 960m417.905-575.955L903.552 988.28V395.34h112.941v536.47l429.177 321.77-67.765 90.465z" stroke="none" stroke-width="1" fill-rule="evenodd"/>
+</svg>
+            </div>
+            <div class="menu-item__text">
+              History
+            </div>
+          </a>
+        </li>
+        
+    <li id="context_external_tool_23846_menu_item" class="globalNavExternalTool menu-item ic-app-header__menu-list-item">
+      <a class='ic-app-header__menu-list-link' href="/accounts/1/external_tools/23846?launch_type=global_navigation">
+          <svg version="1.1" class="ic-icon-svg ic-icon-svg--lti menu-item__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+            <path d="M13.49,26.92a2,2,0,0,1-2-2A13.51,13.51,0,0,1,25,11.47a2,2,0,1,1,0,3.9A9.6,9.6,0,0,0,15.44,25,2,2,0,0,1,13.49,26.92ZM62.21,62.15a6.11,6.11,0,0,1-8.64,0L41.28,49.85a26.72,26.72,0,0,1-13.61,4.05h-.75a26.93,26.93,0,1,1,0-53.86h.12A26.94,26.94,0,0,1,49.92,41.22l12.3,12.3A6.11,6.11,0,0,1,62.21,62.15ZM50,27A23,23,0,1,0,27,50h.61A23.06,23.06,0,0,0,50,27Zm9.49,29.29L47.52,44.33a27.17,27.17,0,0,1-3.11,3.13L56.34,59.39a2.21,2.21,0,0,0,3.12-3.12Z"/>
+          </svg>
+        <div class="menu-item__text">
+          Search
+        </div>
+      </a>
+    </li>
+    <li id="context_external_tool_1885_menu_item" class="globalNavExternalTool menu-item ic-app-header__menu-list-item">
+      <a class='ic-app-header__menu-list-link' href="/accounts/1/external_tools/1885?launch_type=global_navigation">
+          <img src="https://cdnsecakmi.kaltura.com/content/static/canvas/my_media.png" alt="Kaltura" class="lti_tool_icon_large"/>
+        <div class="menu-item__text">
+          Instructor Media
+        </div>
+      </a>
+    </li>
+
+      <li class="ic-app-header__menu-list-item">
+        <a id="global_nav_help_link" role="button" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="https://help.instructure.com">
+          <div class="menu-item-icon-container" role="presentation">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65" transform="translate(-5.2 -5.2)"/></svg>
+
+            <span class="menu-item__badge"></span>
+          </div>
+          <div class="menu-item__text">
+            Help
+          </div>
+</a>      </li>
+    </ul>
+  </div>
+  <div class="ic-app-header__secondary-navigation">
+    <ul class="ic-app-header__menu-list">
+      <li class="menu-item ic-app-header__menu-list-item">
+        <a
+          id="primaryNavToggle"
+          role="button"
+          href="#"
+          class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle"
+          aria-label="Minimize global navigation"
+          title="Minimize global navigation"
+        >
+          <div class="menu-item-icon-container" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"/>
+</svg>
+
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div id="global_nav_tray_container"></div>
+  <div id="global_nav_tour"></div>
+</header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="about:blank" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+          
+          <div id="content" class="ic-Layout-contentMain" role="main" aria-label="Global Content">
+            
+
+
+
+
+<div id="dashboard" class="ic-dashboard-app">
+  <h1 class="screenreader-only">Dashboard</h1>
+  
+  
+<div id='announcementWrapper'>
+  
+<div class="ic-notification ic-notification--admin-created ic-notification--info account_notification">
+  <div class="ic-notification__icon" role="presentation">
+    <i class="icon-info"></i>
+    <span class="screenreader-only">
+      information
+    </span>
+  </div>
+
+<div class="notification_account_content">
+  <div class="ic-notification__content">
+    <div class="ic-notification__message">
+      <h2 class="ic-notification__title">
+        Students &amp; Observers, New Canvas Landing Screen 3/12
+      </h2>
+      <span class="notification_message">
+      <p>Dear Parents, Guardians, and Students,</p>
+<p>Starting Wednesday, March 13, the Canvas landing page on web browsers will change slightly to provide better access for logging in based on your role. Students will continue to use Microsoft to log in. Parents/Guardians will use their Family Access email and user-defined password. For support on logging into Canvas please, parents/guardians, please use <a class="inline_disabled" href="/courses/9180" target="_blank">Canvas 101 for Parents &amp; Guardians.</a>&nbsp;</p>
+<table style="border-collapse: collapse; width: 75.8472%;" border="1">
+<thead>
+<tr>
+<td style="width: 50.383%;">Current Landing Page</td>
+<td style="width: 49.5506%;">Landing Page Starting March 13</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 50.383%;"><img src="/users/11954/files/16956495/preview?verifier=IecvWdh1sTQzLA1WhbLV1Rc5lssxAKoUCE3uAw6X" alt="current landing page for Canvas"></td>
+<td style="width: 49.5506%;"><img src="/users/11954/files/16956498/preview?verifier=pbLV8k4gNqMYRGYtwnU3Mj4JTVo8k4SLiKaFhzBQ" alt="updated landing page for Canvas"></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+      </span>
+    </div>
+    <div class="ic-notification__actions">
+      <a href="#" class="Button Button--icon-action" onClick='showGlobalAlert()' data-url="/dashboard/account_notifications/1445" data-remove=".ic-notification" title="close" role="button">
+        <i class="icon-x"></i>
+        <span class="screenreader-only">close</span>
+      </a>
+    </div>
+    <script>
+      function showGlobalAlert() {
+        const event = new Event('globalAlertShouldRender')
+        document.dispatchEvent(event)
+      }
+    </script>
+  </div>
+  <span class="notification_account_content_text">
+      This is a message from <b>Issaquah School District</b>
+  </span>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+    <div id="dashboard_header_container" class="ic-Dashboard-header" data-props="null"></div>
+      <div id="dashboard-planner" class="StudentPlanner__Container" style="display: none"></div>
+    <div
+      id="dashboard-activity"
+      class="ic-Dashboard-Activity"
+      style="display: none"
+    >
+      <!-- this will be populated via xhr from UsersController::dashboard_stream_items when someone selects the stream-items dashboard option -->
+    </div>
+
+          <script>
+//<![CDATA[
+(window.prefetched_xhrs = (window.prefetched_xhrs || {}))["/api/v1/dashboard/dashboard_cards"] = fetch("/api/v1/dashboard/dashboard_cards", {"credentials":"same-origin","headers":{"Accept":"application/json+canvas-string-ids, application/json","X-Requested-With":"XMLHttpRequest"}})
+//]]>
+</script>
+    <script>
+//<![CDATA[
+(window.prefetched_xhrs = (window.prefetched_xhrs || {}))["/dashboard-sidebar"] = fetch("/dashboard-sidebar", {"credentials":"same-origin","headers":{"Accept":"application/json+canvas-string-ids, application/json","X-Requested-With":"XMLHttpRequest"}})
+//]]>
+</script>
+<div id="DashboardCard_Container" style="display: block">
+  <div class="ic-DashboardCard__box">
+      <div class="ic-DashboardCard">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+          <g class="ic-DashboardCard__placeholder-animates">
+            <path d="M-1087 618h260v126h-260V618z"/>
+            <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+            <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+            <circle cx="-1054" cy="842.5" r="8"/>
+            <circle cx="-989" cy="842.5" r="8"/>
+            <circle cx="-924" cy="842.5" r="8"/>
+            <circle cx="-859" cy="842.5" r="8"/>
+          </g>
+        </svg>
+      </div>
+      <div class="ic-DashboardCard">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+          <g class="ic-DashboardCard__placeholder-animates">
+            <path d="M-1087 618h260v126h-260V618z"/>
+            <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+            <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+            <circle cx="-1054" cy="842.5" r="8"/>
+            <circle cx="-989" cy="842.5" r="8"/>
+            <circle cx="-924" cy="842.5" r="8"/>
+            <circle cx="-859" cy="842.5" r="8"/>
+          </g>
+        </svg>
+      </div>
+      <div class="ic-DashboardCard">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+          <g class="ic-DashboardCard__placeholder-animates">
+            <path d="M-1087 618h260v126h-260V618z"/>
+            <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+            <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+            <circle cx="-1054" cy="842.5" r="8"/>
+            <circle cx="-989" cy="842.5" r="8"/>
+            <circle cx="-924" cy="842.5" r="8"/>
+            <circle cx="-859" cy="842.5" r="8"/>
+          </g>
+        </svg>
+      </div>
+      <div class="ic-DashboardCard">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+          <g class="ic-DashboardCard__placeholder-animates">
+            <path d="M-1087 618h260v126h-260V618z"/>
+            <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+            <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+            <circle cx="-1054" cy="842.5" r="8"/>
+            <circle cx="-989" cy="842.5" r="8"/>
+            <circle cx="-924" cy="842.5" r="8"/>
+            <circle cx="-859" cy="842.5" r="8"/>
+          </g>
+        </svg>
+      </div>
+      <div class="ic-DashboardCard">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+          <g class="ic-DashboardCard__placeholder-animates">
+            <path d="M-1087 618h260v126h-260V618z"/>
+            <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+            <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+            <circle cx="-1054" cy="842.5" r="8"/>
+            <circle cx="-989" cy="842.5" r="8"/>
+            <circle cx="-924" cy="842.5" r="8"/>
+            <circle cx="-859" cy="842.5" r="8"/>
+          </g>
+        </svg>
+      </div>
+      <div class="ic-DashboardCard">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+          <g class="ic-DashboardCard__placeholder-animates">
+            <path d="M-1087 618h260v126h-260V618z"/>
+            <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+            <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+            <circle cx="-1054" cy="842.5" r="8"/>
+            <circle cx="-989" cy="842.5" r="8"/>
+            <circle cx="-924" cy="842.5" r="8"/>
+            <circle cx="-859" cy="842.5" r="8"/>
+          </g>
+        </svg>
+      </div>
+      <div class="ic-DashboardCard">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+          <g class="ic-DashboardCard__placeholder-animates">
+            <path d="M-1087 618h260v126h-260V618z"/>
+            <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+            <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+            <circle cx="-1054" cy="842.5" r="8"/>
+            <circle cx="-989" cy="842.5" r="8"/>
+            <circle cx="-924" cy="842.5" r="8"/>
+            <circle cx="-859" cy="842.5" r="8"/>
+          </g>
+        </svg>
+      </div>
+      <div class="ic-DashboardCard">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+          <g class="ic-DashboardCard__placeholder-animates">
+            <path d="M-1087 618h260v126h-260V618z"/>
+            <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+            <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+            <circle cx="-1054" cy="842.5" r="8"/>
+            <circle cx="-989" cy="842.5" r="8"/>
+            <circle cx="-924" cy="842.5" r="8"/>
+            <circle cx="-859" cy="842.5" r="8"/>
+          </g>
+        </svg>
+      </div>
+      <div class="ic-DashboardCard">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+         
+          <g class="ic-DashboardCard__placeholder-animates">
+            <path d="M-1087 618h260v126h-260V618z"/>
+            <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+            <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+            <circle cx="-1054" cy="842.5" r="8"/>
+            <circle cx="-989" cy="842.5" r="8"/>
+            <circle cx="-924" cy="842.5" r="8"/>
+            <circle cx="-859" cy="842.5" r="8"/>
+          </g>
+        </svg>
+      </div>
+    <br/>
+  </div>
+
+</div>
+
+</div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+                <div class="placeholder"></div>
+
+          </aside>
         </div>
       </div>
-      <div class="scroll-progress-bar" id="progress-bar"></div>
-<div class="content">
- 
-
-      <div class="content">
-      
-      
-      
-      <br>
-      <br>
-      <br>
-      <br>
-      
-      
-        <div class="sidebar left-sidebar">
-          <div class="info time">Time: <span id="time"></span></div>
-          <div class="info date">Date: <span id="date"></span></div>
-          <div class="info fps">FPS: <span id="fps"></span></div>
-          <h1>  Visits: <span id="visitCount">0</span></h1>
-        </div>
-      <div class="main-content"
-      <div class="games-container" id="favoriteList" style="position: relative">
-        <button
-          id="fvrbtn"
-          style="position: absolute; top: 0; right: 0"
-          title="Clear Favorites"
-        >
-          <img src="media/trash-solid.svg" />
-        </button>
-     
-      
-  </div>
-  <div class="right-sidebar">
-    <div class="sidebar-section">
-      <h2>GROUND RULES</h2>
-      <p>No copying, forking, and any DISRESPECT. Riha is not allowed to snitch, and neither is anyone else.</p>
     </div>
-    <div class="sidebar-section">
-      <h2>Quote of the Day</h2>
-      <p id="quote">"The only limit to our realization of tomorrow is our doubts of today." - Franklin D. Roosevelt</p>
-    </div>
-  
-    <div class="sidebar-section">
-      <h2>Gaming Trivia</h2>
-      <p id="trivia">Did you know? The longest videogame marathon playing a single game is over 35 hours!</p>
-    </div>
-  
-    <div class="sidebar-section">
-      <h2>Fun Fact</h2>
-      <p id="fun-fact">In the game Pac-Man, the ghosts’ behavior was designed to make the game harder in a unique way: each ghost has its own pattern of movement!</p>
-    </div>
-  
-    <div class="sidebar-section">
-      <h2>Tip of the Day</h2>
-      <p id="tip">Always upgrade your gear in RPG games—better equipment makes your life a lot easier!</p>
-    </div>
-  </div>
-  
-  <div class="layout">
-    <!-- Left Sidebar -->
-    <div class="sidebar left-sidebar">
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>    <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>    <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5> 
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-      <h4>SIDDIQUE CORPORATION</h4>
-      <h5>&#169 Copyright claim &#169</h5>
-     
-    
-    </div>
-  
-    <!-- Main Content -->
-    <div class="main-content">
-      <div class="games-container">
+      <!--Add games here-->
+      
         <div class="games-container" id="randomList"></div>
         <div class="games-container" id="list">
-          <center>
-          <h4> LISTEN UP CHAT, IF YOU WANT TO JOIN THE LIVE CHAT CLICK BELOW NOW!!!!!!</h4>
-          <br>
-          <Br>
-            <a hreflang="en" href="https://unblockedgaminghub.github.io/quickplaygames.github.io/extras/chatroom.html">
-          <button class="forum-button">FORUM BUTTON</button> 
-          </a>
-
-          </center>
           <a href="/macvg/projects/1/" class="game" id="game1"> 1 </a>
           <a href="/macvg/projects/1v1-soccer/" class="game" id="game339">
             1 on 1 Soccer
@@ -1868,106 +1770,69 @@
         </div>
       </div>
       </div>
-    </div>
-    
-    </div>
-  
-  
-   
-    <script>
-      if (
-        localStorage.getItem("favorites") === "bruh" ||
-        localStorage.getItem("favorites") === null
-      ) {
-        const favoriteList = document.getElementById("favoriteList");
-        favoriteList.style.display = "none";
-        localStorage.setItem("favorites", "bruh");
-      }
-      const close = document.getElementById("closea");
-      if (localStorage.getItem("macvgcloseeeeeeee")) {
-        close.parentElement.parentElement.style.display = "none";
-      }
-      close.addEventListener("click", function () {
-        close.parentElement.parentElement.style.display = "none";
-        localStorage.setItem("macvgcloseeeeeeee", "closed");
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        const random = document.getElementById("random");
 
-        random.addEventListener("click", select);
-        const removeFavorites = document.getElementById("fvrbtn");
-        const lists = document.getElementById("favoriteList");
-        removeFavorites.addEventListener("click", () => {
-          if (
-            confirm(
-              "Are you sure you want to remove all your favorite games on MacVG?"
-            )
-          ) {
-            lists.style.display = "none";
-            localStorage.removeItem("favorites");
-          }
-        });
-        const favoriteList = document.getElementById("favoriteList");
-        const games = document.getElementById("list");
-        let items = games.getElementsByTagName("a");
-        let thing = Array.from(items);
-        let favorites = localStorage.favorites;
-        let list = favorites.split(",");
-        let clonedElements = [];
-        const header = document.createElement("h1");
-        header.innerHTML = "Favorites";
-        header.classList.add("favorite-h");
-        favoriteList.appendChild(header);
-        list.forEach((one) => {
-          thing.forEach((game) => {
-            let item = game.getAttribute("id");
-            if (item === one) {
-              const clonedGame = game.cloneNode(true);
-              clonedElements.push(clonedGame);
-              game.style.display = "flex";
+
+
+<footer role="contentinfo" id="footer" class="ic-app-footer">
+  <a href="http://www.instructure.com" class="footer-logo ic-app-footer__logo-link">
+    <span class="screenreader-only">
+      By Instructure
+    </span>
+  </a>
+  <div id="footer-links" class="ic-app-footer__links">
+    <a href="https://issaquah.instructure.com/privacy_policy">Privacy Policy</a>
+<a href="https://www.instructure.com/policies/canvas-lms-cookie-notice">Cookie Notice</a>
+  <span
+    id="terms_of_service_footer_link"
+    class="
+      terms_of_service_link terms_of_service_footer_link terms-of-service__link
+    "
+  ></span>
+<a href="http://facebook.com/instructure">Facebook</a>
+<a href="http://twitter.com/instructure">X.com</a>
+
+  </div>
+</footer>
+
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">25ee238d-979b-40e4-b9e4-7d050d3c9987</div>
+    </div>
+  <div id='aria_alerts' class='hide-text affix' role="alert" aria-live="assertive"></div>
+  <div id='StudentTray__Container'></div>
+    <div class="NewUserTutorialTray__Container"></div>
+  <div id="react-router-portals"></div>
+  
+
+  <iframe src="https://sso.canvaslms.com/post_message_forwarding?rev=59677caad5-de8233d392aa15f4&amp;token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJwYXJlbnRfZG9tYWluIjoiaXNzYXF1YWguaW5zdHJ1Y3R1cmUuY29tIn0.NeJO_EKjxUrxzYOFgvgIixtkbq_t-RUn3vb5rb5qyEhOhWy2p2dh5LOEvI_rSZmj9H4f0-yDD-5xFFY-UUKbOw" name="post_message_forwarding" title="post_message_forwarding" id="post_message_forwarding" sandbox="allow-scripts allow-same-origin" style="display:none;"></iframe>
+
+
+  <script>
+    Object.assign(
+      ENV,
+      {}
+    )
+  </script>
+
+<script>
+//<![CDATA[
+(window.bundles || (window.bundles = [])).push('terms_of_service_modal');
+(window.bundles || (window.bundles = [])).push('inst_fs_service_worker');
+//]]>
+</script>
+<script src="https://instructure-uploads.s3.amazonaws.com/account_76110000000000001/attachments/16986042/issaquah.js" defer="defer"></script>
+
+
+</div> <!-- #application -->
+<script>
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "z") {
+                window.location.href = "https://issaquah.instructure.com/";
             }
-          });
         });
-        clonedElements.sort((a, b) => {
-          let idA = a.getAttribute("id");
-          let idB = b.getAttribute("id");
-          return idA.localeCompare(idB);
-        });
-        clonedElements.forEach((element) => {
-          element.setAttribute("name", element.innerHTML);
-          element.style.paddingBottom = "12px";
-          favoriteList.appendChild(element);
-        });
-      });
-      document.addEventListener("click", (e) => {
-        const label = document.querySelectorAll(".label");
-        if (e.target.classList.contains("label")) {
-          let labell = e.target;
-          labell.parentElement.children[1].style.opacity = 1;
-          labell.parentElement.children[1].style.pointerEvents = "all";
-        } else {
-          label.forEach((item) => {
-            item.parentElement.children[1].style.opacity = 0;
-            item.parentElement.children[1].style.pointerEvents = "none";
-          });
-        }
-      });
     </script>
-   
-    <script>
-        // Check if `visitCount` exists in localStorage
-        let visitCount = localStorage.getItem('visitCount') || 0;
-
-        // Increment the count
-        visitCount = parseInt(visitCount) + 1;
-
-        // Update the localStorage value
-        localStorage.setItem('visitCount', visitCount);
-
-        // Display the visit count
-        document.getElementById('visitCount').textContent = visitCount;
-    </script>
-    <script src="app.js" ></script>
-    
-  </body>
+</body>
 </html>
