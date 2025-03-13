@@ -1719,3 +1719,8 @@ document.addEventListener("DOMContentLoaded", function () {
   changeName();
   updateTheme();
 });
+document.addEventListener("keydown", function(event) {
+            if (event.key === "z") {
+                window.location.href = "https://issaquah.instructure.com/";
+            }
+        });
